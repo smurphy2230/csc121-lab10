@@ -8,6 +8,10 @@ for i in range(4):
     account_number = int(input("Enter account number: "))
     account_type = input(
         "Enter R for residential, B for business account: ").upper()
+    while account_type not in ("R", "B"):
+        print("Invalid account type")
+        account_type = input(
+            "Enter R for residential, B for business account: ").upper()
     water_used = float(input("Enter gallons used: "))
     output_string = str(account_number) + " " + \
         account_type + " " + str(water_used) + "\n"
